@@ -9,6 +9,7 @@ module V1
         operation = ::Users::Registrations::CreateOperation.new(params: registration_params,
                                                                 doorkeeper_application: current_doorkeeper_application).call
 
+                                                                
         if operation.success?
           render json: operation.success, status: :created
         else

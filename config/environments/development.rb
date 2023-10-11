@@ -2,8 +2,9 @@
 
 require 'active_support/core_ext/integer/time'
 
-APP_HOST = "lvh.me:#{ENV.fetch('PORT', 3000)}".freeze
-URL_PROTOCOL = ENV['URL_PROTOCOL'] || 'http'
+# APP_HOST = "lvh.me:#{ENV.fetch('PORT', 3000)}".freeze
+APP_HOST = '3000-jaifan-railsapiboilerpl-aysrstg73od.ws-us105.gitpod.io'.freeze
+URL_PROTOCOL = ENV['URL_PROTOCOL'] || 'https'
 
 Rails.application.routes.default_url_options[:host] = APP_HOST
 Rails.application.routes.default_url_options[:protocol] = URL_PROTOCOL
@@ -11,7 +12,7 @@ Rails.application.routes.default_url_options[:protocol] = URL_PROTOCOL
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.hosts << '.lvh.me'
+  config.hosts << '3000-jaifan-railsapiboilerpl-aysrstg73od.ws-us105.gitpod.io'
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

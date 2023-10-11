@@ -7,12 +7,14 @@ module Users
       option :doorkeeper_application, type: Types.Instance(Doorkeeper::Application)
       option :contract, default: proc { Users::Registrations::RegisterContract.new }
 
+      
       def call
         contract_params = yield validate(contract)
         user = yield call_service(contract_params)
 
         Success(user)
       end
+
 
       private
 
